@@ -1,0 +1,75 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ww-gitops
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: weave-gitops
+      sourceRef:
+        kind: HelmRepository
+        name: ww-gitops
+  interval: 1m0s
+  values:
+    adminUser:
+      create: true
+      password: meself
+      username: moi
+    namespace: flux-system
+    rbac:
+      create: true
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: ww-gitops
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  url: https://helm.gitops.weave.works
+
+
+
+# spec:
+#   releaseName: gitops-server
+#   targetNamespace: flux-system
+#   chart:
+#     spec:
+#       chart: ./charts/gitops-server
+#       sourceRef:
+#         kind: GitRepository
+#         name: ww-gitops
+#   install:
+#     remediation:
+#       retries: 3
+#   values:
+#     namespace: flux-system
+#     additionalArgs: ["--insecure"]
+#     image:
+#       tag: v0.7.0-rc6
+#       repository: ghcr.io/weaveworks/wego-app
+#     adminUser:
+#       create: true
+#       username: myself
+#       password: unsecure
+#   interval: 1m0s
+
+# ---
+# apiVersion: source.toolkit.fluxcd.io/v1beta1
+# kind: GitRepository
+# metadata:
+#   name: ww-gitops
+#   namespace: flux-system
+# spec:
+#   interval: 1m0s
+#   ref:
+#     branch: main
+#   secretRef:
+#     name: flux-system
+#   url: ssh://git@github.com/weaveworks/weave-gitops
+#   ignore: |
+#     # exclude all
+#     /*
+#     # include charts directory
+#     !/charts/
