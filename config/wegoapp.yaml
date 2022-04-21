@@ -23,7 +23,6 @@ spec:
       create: true
       password: nox
       username: fort
-    namespace: flux-system
 
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
