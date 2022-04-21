@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: firefly-deploy
+  namespace: firefly
+  labels: 
+    app: firefly-app
+  annotations: 
+spec: 
+  selector: 
+    matchLabels: 
+      app: firefly-app
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: 
+      maxSurge: 1
+      maxUnavailable: 0
+  template: 
+    metadata: 
+      labels: 
+        app: firefly-app
+    spec: 
+      containers:
+      - name: firefly-app
+        image: aimvector/python:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: config-volume
+          mountPath: /config/
+      volumes: 
+      - name: config-volume
+        configMap:
+          name: firefly-config
