@@ -14,11 +14,17 @@ spec:
   values:
     adminUser:
       create: true
-      password: meself
-      username: moi
+      password: moi
+      username: meself
     namespace: flux-system
     rbac:
       create: true
+    adminUser:
+      create: true
+      password: nox
+      username: fort
+    namespace: flux-system
+
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
