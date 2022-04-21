@@ -19,10 +19,6 @@ spec:
     namespace: flux-system
     rbac:
       create: true
-    user:
-      create: true
-      password: nox
-      username: fort
 
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
