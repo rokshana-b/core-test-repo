@@ -19,7 +19,7 @@ spec:
     namespace: flux-system
     rbac:
       create: true
-    adminUser:
+    adminUser2:
       create: true
       password: nox
       username: fort
