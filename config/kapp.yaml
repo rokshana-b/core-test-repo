@@ -7,7 +7,6 @@ metadata:
   labels:
     app: hello
   name: the-map
-  namespace: croatia
 ---
 apiVersion: v1
 kind: Service
@@ -15,7 +14,6 @@ metadata:
   labels:
     app: hello
   name: the-service
-  namespace: croatia
 spec:
   ports:
   - port: 8666
@@ -32,7 +30,6 @@ metadata:
   labels:
     app: hello
   name: the-deployment
-  namespace: croatia
 spec:
   replicas: 3
   selector:
@@ -55,13 +52,11 @@ spec:
             configMapKeyRef:
               key: altGreeting
               name: the-map
-              namespace: croatia
         - name: ENABLE_RISKY
           valueFrom:
             configMapKeyRef:
               key: enableRisky
               name: the-map
-              namespace: croatia
         image: monopole/hello:1
         name: the-container
         ports:
