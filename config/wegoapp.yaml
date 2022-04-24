@@ -76,7 +76,11 @@
 #   url: https://helm.gitops.weave.works
 
 
-
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ww-gitops
+  namespace: flux-system
 spec:
   releaseName: gitops-server
   targetNamespace: flux-system
