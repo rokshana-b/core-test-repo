@@ -15,5 +15,6 @@ spec:
   interval: 1m0s
   values:
     adminUser:
+      user: tester
       passwordHash: $2a$10$Abh.I8l5CxbQEzKFmVh1UeEC31NIEvDE7lgYHiC1C0VFHbgIGJLa2
 
