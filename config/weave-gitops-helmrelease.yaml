@@ -18,4 +18,7 @@ spec:
       create: true
       username: tester
       passwordHash: $2a$10$Abh.I8l5CxbQEzKFmVh1UeEC31NIEvDE7lgYHiC1C0VFHbgIGJLa2
+    namespace: flux-system
+    rbac:
+      create: true
 
