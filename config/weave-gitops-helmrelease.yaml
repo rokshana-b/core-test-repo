@@ -1,0 +1,19 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ww-gitops
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: weave-gitops
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: ww-gitops
+  interval: 1m0s
+  values:
+    adminUser:
+      passwordHash: $2a$10$0VG3BKA3BTiIzrH8P3Ccuu7AIeKnFLtOQPrNcAbNUt32FMLD2li7K
+
