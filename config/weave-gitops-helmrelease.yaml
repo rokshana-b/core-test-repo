@@ -15,5 +15,5 @@ spec:
   interval: 1m0s
   values:
     adminUser:
-      passwordHash: $2a$10$.J/6Kpcv8tj.XagEnynYjuNTzaRHYk9Q9HlkNanWcYwNHTecQQfSS
+      passwordHash: $2a$10$xZNpN3CHr/II68VFKIV1I.ufHsYsK4VrY2FTVSJD.Ux53ziE8HCoG
 
