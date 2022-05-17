@@ -19,6 +19,8 @@ spec:
       repository: ghcr.io/weaveworks/wego-app
     adminUser:
       create: true
-      passwordHash: $2a$10$OS5NJmPNEb13UgTOSKnMxOWlmS7mlxX77hv4yAiISvZ71Dc7IuN3q
+      passwordHash: $2a$10$AXQbmU9BwY4zqQPIe/D3ruRA.vM5RCGo/TOiMU5yPQnJYU8D4meoa
       username: IAdmin12
+      rbac:
+        create: true
 
