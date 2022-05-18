@@ -18,7 +18,7 @@ spec:
       enabled: true
       secretName: "my-tls-secret"
     image:
-      tag: v0.8.1-rc.3
+      tag: v0.8.1-rc.4
       repository: ghcr.io/weaveworks/wego-app
     adminUser:
       create: true
