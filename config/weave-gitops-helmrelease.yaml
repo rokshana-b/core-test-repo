@@ -14,8 +14,11 @@ spec:
         name: ww-gitops
   interval: 1m0s
   values:
+    serverTLS:
+      enabled: true
+      secretName: "my-tls-secret"
     image:
-      tag: v0.8.1-rc.4
+      tag: v0.8.0
       repository: ghcr.io/weaveworks/wego-app
     adminUser:
       create: true
