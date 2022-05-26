@@ -5,11 +5,11 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: "./clusters/"
+  path: "./clusters/my-cluster"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: my-cluster
+    name: nginx.yaml
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
