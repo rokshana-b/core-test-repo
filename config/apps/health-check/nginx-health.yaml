@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: nginx-5yy1td
+  namespace: default
+spec:
+  interval: 5m
+  path: "./apps/nginx"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: nginx
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: nginx-5yy1td
+      namespace: my-nginx-5yy1td
+  timeout: 2m
+
