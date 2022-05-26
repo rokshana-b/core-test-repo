@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: new-repo
+    name: core-test-repo
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
