@@ -7,9 +7,9 @@ spec:
   interval: 5m
   path: "./clusters/my-cluster/"
   prune: true
-  # sourceRef:
-  #   kind: GitRepository
-  #   name: core-test-repo/clusters/my-cluster
+  sourceRef:
+    kind: GitRepository
+    name: my-cluster
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
