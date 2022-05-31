@@ -15,11 +15,11 @@ spec:
   interval: 1m0s
   values:
     image:
-      tag: v0.8.1-rc.5
+      tag: v0.8.1-rc.6
       repository: ghcr.io/weaveworks/wego-app
     adminUser: 
       create: true
       username: Iadmin01
-      passwordHash: $2a$10$AXQbmU9BwY4zqQPIe/D3ruRA.vM5RCGo/TOiMU5yPQnJYU8D4meoa
+      passwordHash: $2a$10$Tpe2VGtLOY7Kw9462D.aHONmrzuDZaVpYp.blUFXnZJmQ0VrhHHiO
       rbac:
         create: true
