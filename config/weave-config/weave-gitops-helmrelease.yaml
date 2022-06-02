@@ -15,7 +15,7 @@ spec:
   interval: 1m0s
   values:
     image:
-      tag: v0.8.1-rc.6
+      tag: v0.8.1
       repository: ghcr.io/weaveworks/wego-app
     adminUser: 
       create: true
